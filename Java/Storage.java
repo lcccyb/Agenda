@@ -113,9 +113,9 @@ public class Storage {
         }
         return false;
     }
-    public void createMeeting()
-
-
+    public void createMeeting(final Meeting t_meeting) {
+        m_meetingList.add(t_meeting);
+    }
 
 
 
