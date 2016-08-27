@@ -3,7 +3,6 @@ public class User {
 	private String m_password;
 	private String m_email;
 	private String m_phone;
-
 	public User() {
 		m_name = m_password = m_email = m_phone = "";
 	}

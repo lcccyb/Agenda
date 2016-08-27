@@ -6,7 +6,6 @@ public class Storage {
     private static Storage m_Instance = null;
     public LinkedList<User> m_userList;
     private LinkedList<Meeting> m_meetingList;
-    boolean m_dirty;
     private User Parse(String t_user) {
         Pattern pattern = Pattern.compile("\",\"");
         Matcher matcher = pattern.matcher(t_user);
@@ -66,6 +65,7 @@ public class Storage {
     private Storage() {
         m_userList = new LinkedList<>();
         m_meetingList = new LinkedList<>();
+        sync();
     }
     public static Storage getInstance() {
         if (m_Instance == null) {
@@ -75,12 +75,13 @@ public class Storage {
     }
     public void createUser(final User t_user) {
         m_userList.add(t_user);
+        sync();
     }
     public final LinkedList<User> queryUser(UserFilter t_filter) {
         LinkedList<User> t_userList = new LinkedList<>();
         for (User t_user : m_userList) {
             if (t_filter.filter(t_user)) {
-                t_userList.add(t_userList);
+                t_userList.add(t_user);
             }
         }
         return t_userList;
@@ -93,6 +94,7 @@ public class Storage {
                 total++;
             }
         }
+        sync();
         return total;
     }
     public int deleteUser(UserFilter t_filter) {
@@ -103,6 +105,7 @@ public class Storage {
                 m_userList.remove(t_user);
             }
         }
+        sync();
         return total;
     }
     public boolean userExisted(final String t_userName) {
@@ -115,20 +118,48 @@ public class Storage {
     }
     public void createMeeting(final Meeting t_meeting) {
         m_meetingList.add(t_meeting);
+        sync();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public LinkedList<Meeting> queryMeeting(MeetingFilter t_filter) {
+        LinkedList<Meeting> t_meetingList = new LinkedList<>();
+        for (Meeting t_meeting : m_meetingList) {
+            if (t_filter.filter(t_meeting)) {
+                t_meetingList.add(t_meeting);
+            }
+        }
+        sync();
+        return t_meetingList;
+    }
+    public int updateMeeting(MeetingFilter t_filter) {
+        int total = 0;
+        for (Meeting t_meeting : m_meetingList) {
+            if (t_filter.filter(t_meeting)) {
+                t_filter.switcher(t_meeting);
+            }
+        }
+        sync();
+        return total;
+    }
+    public int deleteMeeting(MeetingFilter t_filter) {
+        int total = 0;
+        for (Meeting t_meeting : m_meetingList) {
+            if (t_filter.filter(t_meeting)) {
+                total++;
+                m_meetingList.remove(t_meeting);
+            }
+        }
+        sync();
+        return total;
+    }
+    public boolean sync() {
+        try {
+            writeToFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
     public static void main(String[] args) {
         Storage storage = Storage.getInstance();
         try {
