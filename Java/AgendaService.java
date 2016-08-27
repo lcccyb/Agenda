@@ -161,6 +161,5 @@ public class AgendaService {
 		m_storage.sync();
 	}
 	public static void main(String[] args) {
-		
 	}
 }
