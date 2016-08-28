@@ -2,8 +2,8 @@ import java.util.function.*;
 import java.util.*;
 import java.io.*;
 import java.util.regex.*;
-public class Storage {
-    private static Storage m_Instance = null;
+public class ExStorage {
+    private static ExStorage m_Instance = null;
     public LinkedList<User> m_userList;
     private LinkedList<Meeting> m_meetingList;
     private User Parse(String t_user) {
@@ -62,14 +62,14 @@ public class Storage {
             fop.close();
         }
     }
-    private Storage() {
+    private ExStorage() {
         m_userList = new LinkedList<>();
         m_meetingList = new LinkedList<>();
         sync();
     }
-    public static Storage getInstance() {
+    public static ExStorage getInstance() {
         if (m_Instance == null) {
-            m_Instance = new Storage();
+            m_Instance = new ExStorage();
         }
         return m_Instance;
     }
@@ -161,13 +161,13 @@ public class Storage {
         return true;
     }
     public static void main(String[] args) {
-        Storage storage = Storage.getInstance();
+        ExStorage ExStorage = ExStorage.getInstance();
         try {
-            storage.readFromFile();
+            ExStorage.readFromFile();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        for (User user : storage.m_userList) {
+        for (User user : ExStorage.m_userList) {
             System.out.println(String.valueOf(user));
         }
     }

@@ -6,18 +6,6 @@ public class User {
 	public User() {
 		m_name = m_password = m_email = m_phone = "";
 	}
-	// private boolean checkPassword(final String t_password) {
-	// 	Matcher matcher = Pattern.compile("(\\S+)").matcher(t_password);
-	// 	return matcher.find();
-	// }
-	// private boolean checkEmail(final String t_email) {
-	// 	Matcher matcher = Pattern.compile("(\\w+)@(\\w).([a-z]{2,3})").matcher(t_email);
-	// 	return matcher.find();
-	// }
-	// private boolean checkPhone(final String t_phone) {
-	// 	Matcher matcher = Pattern.compile("(\\d){11}").matcher(t_phone);
-	// 	return matcher.find();
-	// }
  	public User(final String t_username, final String t_password, final String t_email, final String t_phone) {
 		m_name = t_username;
 		m_password = t_password;
