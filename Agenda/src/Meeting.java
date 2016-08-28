@@ -67,7 +67,7 @@ public class Meeting {
 	public String toString() {
 		return new String("\"" + this.getTitle() + "\",\"" + this.getSponsor() +
 			"\",\"" + this.getStartDate() + "\",\"" + this.getEndDate() + "\",\"" +
-				this.getParticipator());
+				this.getParticipator()) + "\"";
 	}
 	public static void main(String[] args) {
 		ArrayList<String> t_participator = new ArrayList<>(Arrays.asList("yan", "ze"));

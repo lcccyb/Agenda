@@ -81,7 +81,7 @@ public class  Date {
         return true;
     }
     public static Date stringToDate (final String t_dateString) {
-        return new Date();
+        return new Date(t_dateString);
     }
     private static String int2str(final int t_time) {
         if (t_time < 10) {

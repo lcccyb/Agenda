@@ -18,5 +18,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M9" level="application_server_libraries" />
     <orderEntry type="library" name="mysql" level="project" />
+    <orderEntry type="library" name="commons-collections" level="project" />
   </component>
 </module>
