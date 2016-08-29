@@ -23,9 +23,6 @@
     <![endif]-->
     <%@ page language="java" contentType="text/html; charset=UTF-8"
              pageEncoding="UTF-8"%>
-    <%
-      System.out.print("hello world!");
-    %>
   </head>
   <body>
     <div class="container" style="width:978px;">
