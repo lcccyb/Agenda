@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - Agenda@localhost" uuid="aac58404-d133-49d1-a2af-b518f9cf83b0">
+    <database-info product="MySQL" version="5.7.12" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="Agenda"/>
+      <table id="2" parent="1" name="Meetings"/>
+      <table id="3" parent="1" name="Users"/>
+      <column id="4" parent="2" name="Sponsor">
+        <data-type>text</data-type>
+      </column>
+      <column id="5" parent="2" name="Title">
+        <data-type>text</data-type>
+      </column>
+      <column id="6" parent="2" name="StartDate">
+        <data-type>text</data-type>
+      </column>
+      <column id="7" parent="2" name="EndDate">
+        <data-type>text</data-type>
+      </column>
+      <column id="8" parent="2" name="Participator">
+        <data-type>longtext</data-type>
+      </column>
+      <column id="9" parent="3" name="UserName">
+        <data-type>text</data-type>
+      </column>
+      <column id="10" parent="3" name="Password">
+        <data-type>text</data-type>
+      </column>
+      <column id="11" parent="3" name="Email">
+        <data-type>text</data-type>
+      </column>
+      <column id="12" parent="3" name="Phone">
+        <data-type>text</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>

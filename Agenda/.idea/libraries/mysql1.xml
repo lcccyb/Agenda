@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mysql1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/Agenda_war_exploded/WEB-INF/lib/mysql.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
