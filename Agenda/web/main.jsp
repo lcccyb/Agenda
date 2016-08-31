@@ -32,23 +32,23 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                         <span class="sr-only">Toggle navigation</span>
                     </button>
-                    <a class="navbar-brand" href="#">Agenda</a>
+                    <a class="navbar-brand" href="main.jsp">Agenda</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-01">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#fakelink">Meetings<span class="navbar-unread">1</span></a></li>
+                        <li><a href="#">Create Meeting<span class="navbar-unread">1</span></a></li>
+                        <li><a href="#fakelink">Meetings</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Change Password</a></li>
-                                <li><a href="#">Change Email</a></li>
-                                <li><a href="#">Change Phone</a></li>
+                                <li><a href="ChangePassword/ChangePassword.jsp">Change Password</a></li>
+                                <li><a href="ChangeEmail/ChangeEmail.jsp">Change Email</a></li>
+                                <li><a href="ChangePhone/ChangePhone.jsp">Change Phone</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Delete Account</a></li>
+                                <li><a href="DeleteUser/deleteUser.jsp">Delete Account</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Create Meeting</a></li>
                         <li><a href="#fakelink">About Us</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" action="#" role="search">
@@ -65,7 +65,31 @@
             </nav><!-- /navbar -->
         </div>
     </div> <!-- /row -->
+    <div class="demo-headline">
+        <h1 class="demo-logo">
+            <div class="logo"></div>
+            Agenda
+            <small>Free Meetings Administration System</small>
+        </h1>
 </div>
+    </div>
+<br>
+<br>
+<br>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
+                <h3 class="footer-title">
+                    About us!
+                </h3>
+                <p>Do you like Agenda?<br>
+                    If you have some suggestion, please send us an Email or you can review in our github!<a href="" target="_blank">https://github.com/Staryyan/Agenda</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="dist/js/vendor/jquery.min.js"></script>
 <script src="dist/js/vendor/video.js"></script>
 <script src="dist/js/flat-ui.min.js"></script>
