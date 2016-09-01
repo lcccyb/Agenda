@@ -1,12 +1,34 @@
 package src;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * Created by yanzexin on 16/8/31.
  * All right reserved.
  */
 public class AgendaServiceTest {
+    AgendaService m_service = new AgendaService();
+    @Test
+    public void listAllMeetings() throws Exception {
+        System.out.println(m_service.listAllMeetings("Summer"));
+        for (Meeting t_meeting : m_service.listAllMeetings("Summer")) {
+            System.out.print(t_meeting.getSponsor());
+        }
+    }
+
+    @Test
+    public void listSponsorMeetings() throws Exception {
+        for (Meeting t_meeting : m_service.listAllMeetings("Summer")) {
+            System.out.print(t_meeting.getSponsor());
+        }
+    }
+
+    @Test
+    public void listAllParticipatorMeetings() throws Exception {
+
+    }
+
     @org.junit.Test
     public void userRegister() throws Exception {
         AgendaService m_service = new AgendaService();

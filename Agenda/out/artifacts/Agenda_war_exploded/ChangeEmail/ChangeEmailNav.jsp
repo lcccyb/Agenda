@@ -48,14 +48,23 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-01">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#">Create Meeting<span class="navbar-unread">1</span></a></li>
-                        <li><a href="#fakelink">Meetings</a></li>
+                        <li><a href="../CreateMeeting/CreateMeeting.jsp">Create Meeting<span class="navbar-unread">1</span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meeting <b class="caret"></b></a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">All Sponsor Meeting</a></li>
+                                <li><a href="#">All Participator Meeting</a></li>
+                                <li><a href="#">Query Meeting by Title</a></li>
+                                <li><a href="#">Query Meeting by Interval</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
                             <ul class="dropdown-menu">
                                 <li><a href="../ChangePassword/ChangePassword.jsp">Change Password</a></li>
-                                <li><a href="ChangeEmail.jsp">Change Email</a></li>
+                                <li><a href="../ChangeEmail/ChangeEmail.jsp">Change Email</a></li>
                                 <li><a href="../ChangePhone/ChangePhone.jsp">Change Phone</a></li>
                                 <li><a href="../SignOut.jsp">Sign out!</a></li>
                                 <li class="divider"></li>

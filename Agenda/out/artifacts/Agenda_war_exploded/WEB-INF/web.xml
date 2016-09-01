@@ -27,6 +27,14 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>Servlet.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateMeetingServlet</servlet-name>
+        <servlet-class>Servlet.CreateMeetingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AllMeetingServlet</servlet-name>
+        <servlet-class>Servlet.AllMeetingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInServlet</servlet-name>
         <url-pattern>/LogInCheck</url-pattern>
@@ -50,5 +58,13 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateMeetingServlet</servlet-name>
+        <url-pattern>/CreateMeeting</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AllMeetingServlet</servlet-name>
+        <url-pattern>/AllMeeting</url-pattern>
     </servlet-mapping>
 </web-app>

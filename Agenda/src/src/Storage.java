@@ -6,7 +6,7 @@ package src;
 import java.util.ArrayList;
 public class Storage {
     private ArrayList<User> m_userList = new ArrayList<>();
-    private ArrayList<Meeting> m_meetingList = new ArrayList<>();
+    public ArrayList<Meeting> m_meetingList = new ArrayList<>();
     public static Storage m_Instance = null;
     private Storage() {
         m_userList = DBUtil.readUser();
@@ -93,13 +93,13 @@ public class Storage {
         DBUtil.insertMeeting(t_sponsor, t_participator, t_startDate, t_endDate, t_title);
     }
     public ArrayList<Meeting> queryMeeting(MeetingFilter filter) {
-        ArrayList<Meeting> m_meetingList = new ArrayList<>();
+        ArrayList<Meeting> t_meetingList = new ArrayList<>();
         for (Meeting t_meeting : m_meetingList) {
             if (filter.filter(t_meeting)) {
-                m_meetingList.add(t_meeting);
+                t_meetingList.add(t_meeting);
             }
         }
-        return m_meetingList;
+        return t_meetingList;
     }
     public void deleteMeeting(final String t_userName, final String t_title) {
         String sql = "DELETE FROM Meetings WHERE Sponsor = \"" + t_userName + "\" AND Title = \"" + t_title + "\"";
