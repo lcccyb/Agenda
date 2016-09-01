@@ -24,50 +24,10 @@
 </head>
 <body>
 <div class="container">
-    <br>
-    <div class="row demo-row">
-        <div class="col-xs-12">
-            <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-                        <span class="sr-only">Toggle navigation</span>
-                    </button>
-                    <a class="navbar-brand" href="#">Agenda</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse-01">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#fakelink">Meetings<span class="navbar-unread">1</span></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-                            <span class="dropdown-arrow"></span>
-                            <ul class="dropdown-menu">
-                                <li><a href="ChangePassword.jsp" class="active">Change Password</a></li>
-                                <li><a href="../ChangeEmail/ChangeEmail.jsp">Change Email</a></li>
-                                <li><a href="../ChangePhone/ChangePhone.jsp">Change Phone</a></li>
-                                <li class="divider"></li>
-                                <li><a href="deleteUser.jsp" style="color: red">Delete Account</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Create Meeting</a></li>
-                        <li><a href="#fakelink">About Us</a></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" action="#" role="search">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-                    <span class="input-group-btn">
-                      <button type="submit" class="btn"><span class="fui-search"></span></button>
-                    </span>
-                            </div>
-                        </div>
-                    </form>
-                </div><!-- /.navbar-collapse -->
-            </nav><!-- /navbar -->
-        </div>
-    </div> <!-- /row -->
+    <jsp:include page="nav.jsp"/>
     <h3 class="demo-panel-title">Delete User!<br>
         <h4 class="alert-danger" style="width: 400px">This is extremely important.</h4>
-        <form action="deleteUserOperation.jsp" method="post">
+        <form action="/DeleteUser" method="post">
             <div class="col-xs-3" style="width: 500px; position:relative; margin-left: 200px;">
                 <div class="form-group has-success">
                     Input Your UserName: <input type="text" value="" placeholder="UserName!" class="form-control" name="userName" />
@@ -100,6 +60,7 @@
             <input class="btn btn-danger" value="Sorry! I regret!" type="reset" style="position: relative; margin-top: 20px; margin-left: 300px; width: 300px">
         </form>
 </div>
+<jsp:include page="Footer.jsp"/>
 <script src="../dist/js/vendor/jquery.min.js"></script>
 <script src="../dist/js/vendor/video.js"></script>
 <script src="../dist/js/flat-ui.min.js"></script>

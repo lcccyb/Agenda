@@ -24,6 +24,12 @@
     <![endif]-->
 </head>
 <body>
+<%
+    Cookie[] cookies = request.getCookies();
+    if (cookies == null) {
+        response.sendRedirect("http://localhost:8080/Agenda.jsp");
+    }
+%>
 <div class="container" style="width:978px;">
     <h2 class="demo-logo">Agenda
         <small>Free Meetings Administration System</small>
@@ -35,7 +41,7 @@
                 <h4>Welcome to<small style="text-align:center">Agenda</small></h4>
             </div>
             <div class="login-form" style="position:absolute; top:90px; width:400px;">
-                <form action="Operation.jsp" method="post">
+                <form action="/Register" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" name="userName" />
                         <label class="login-field-icon fui-user" for="login-name"></label>

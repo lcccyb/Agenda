@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Agenda - Free Meetings Adminstration System</title>
-    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
+    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme,
+    this responsive framework includes a PSD and HTML version."/>
 
     <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
 
@@ -23,6 +24,17 @@
     <![endif]-->
 </head>
 <body>
+<%
+    Cookie[] cookies = request.getCookies();
+    if (cookies == null) {
+        response.sendRedirect("http://localhost:8080/Agenda.jsp");
+    }
+    for (Cookie each : cookies) {
+        if (each.getName().equals("userName") && each.getValue() == null) {
+            response.sendRedirect("http://localhost:8080/Agenda.jsp");
+        }
+    }
+%>
 <div class="container">
     <br>
     <div class="row demo-row">
@@ -45,6 +57,7 @@
                                 <li><a href="ChangePassword/ChangePassword.jsp">Change Password</a></li>
                                 <li><a href="ChangeEmail/ChangeEmail.jsp">Change Email</a></li>
                                 <li><a href="ChangePhone/ChangePhone.jsp">Change Phone</a></li>
+                                <li><a href="SignOut.jsp">Sign out!</a></li>
                                 <li class="divider"></li>
                                 <li><a href="DeleteUser/deleteUser.jsp">Delete Account</a></li>
                             </ul>
@@ -84,7 +97,8 @@
                     About us!
                 </h3>
                 <p>Do you like Agenda?<br>
-                    If you have some suggestion, please send us an Email or you can review in our github!<a href="" target="_blank">https://github.com/Staryyan/Agenda</a>
+                    If you have some suggestion, please send us an Email or you can review in our github!
+                    <a href="" target="_blank">https://github.com/Staryyan/Agenda</a>
                 </p>
             </div>
         </div>

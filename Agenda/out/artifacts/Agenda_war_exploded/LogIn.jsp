@@ -37,7 +37,7 @@
         <h4>Welcome to <small>Agenda</small></h4>
       </div>
       <div class="login-form">
-        <form action="LogInOperation.jsp" method="post">
+        <form action="/LogInCheck" method="post">
         <div class="form-group">
           <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" name="userName" />
           <label class="login-field-icon fui-user" for="login-name"></label>
