@@ -9,6 +9,14 @@ import org.junit.Test;
  */
 public class AgendaServiceTest {
     AgendaService m_service = new AgendaService();
+
+    @Test
+    public void queryMeetingByTitle() throws Exception {
+        for (Meeting t_meeting : m_service.queryMeetingByTitle("Summer", "Test")) {
+            System.out.println(t_meeting.getTitle());
+        }
+    }
+
     @Test
     public void listAllMeetings() throws Exception {
         System.out.println(m_service.listAllMeetings("Summer"));

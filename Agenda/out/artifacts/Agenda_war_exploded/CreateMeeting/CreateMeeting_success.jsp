@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-    <jsp:include page="nav.jsp"/>
+    <jsp:include page="../Navigation.jsp"/>
     <h3 class="demo-panel-title">Create Meeting</h3>
     <form action="/CreateMeeting" method="post">
         <div class="col-xs-3" style="width: 500px; position:relative; margin-left: 200px;">
@@ -49,19 +49,6 @@
         <input class="btn btn-danger" value="Reset" type="reset" style="position: relative; margin-top: 40px; margin-left: 300px; width: 300px">
     </form>
 </div>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-7">
-                <h3 class="footer-title">
-                    About us!
-                </h3>
-                <p>Do you like Agenda?<br>
-                    If you have some suggestion, please send us an Email or you can review in our github!<a href="" target="_blank">https://github.com/Staryyan/Agenda</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<jsp:include page="../Footer.jsp"/>
 </body>
 </html>

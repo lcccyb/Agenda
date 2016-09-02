@@ -53,10 +53,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meeting <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
                             <ul class="dropdown-menu">
-                                <li><a href="AllSponsorMeeting/AllSponsorMeeting.jsp?id=1">All Sponsor Meeting</a></li>
-                                <li><a href="AllSponsorMeeting/AllSponsorMeeting.jsp?id=2">All Participator Meeting</a></li>
-                                <li><a href="#">Query Meeting by Title</a></li>
-                                <li><a href="#">Query Meeting by Interval</a></li>
+                                <li><a href="AllSponsorMeeting/AllMeeting.jsp">List Meeting</a></li>
+                                <li><a href="QueryMeeting/QueryMeetingbyTitle.jsp">Query Meeting by Title</a></li>
+                                <li><a href="QueryMeeting/QueryMeetingbyInterval.jsp">Query Meeting by Interval</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

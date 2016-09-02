@@ -44,7 +44,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                         <span class="sr-only">Toggle navigation</span>
                     </button>
-                    <a class="navbar-brand" href="main.jsp">Agenda</a>
+                    <a class="navbar-brand" href="../main.jsp">Agenda</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-01">
                     <ul class="nav navbar-nav navbar-left">
@@ -53,10 +53,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meeting <b class="caret"></b></a>
                             <span class="dropdown-arrow"></span>
                             <ul class="dropdown-menu">
-                                <li><a href="#">All Sponsor Meeting</a></li>
-                                <li><a href="#">All Participator Meeting</a></li>
-                                <li><a href="#">Query Meeting by Title</a></li>
-                                <li><a href="#">Query Meeting by Interval</a></li>
+                                <li><a href="../AllSponsorMeeting/AllMeeting.jsp">List Meeting</a></li>
+                                <li><a href="../QueryMeeting/QueryMeetingbyTitle.jsp">Query Meeting by Title</a></li>
+                                <li><a href="../QueryMeeting/QueryMeetingbyInterval.jsp">Query Meeting by Interval</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -88,14 +87,5 @@
         </div>
     </div> <!-- /row -->
 </div>
-
-<script src="../dist/js/vendor/jquery.min.js"></script>
-<script src="../dist/js/vendor/video.js"></script>
-<script src="../dist/js/flat-ui.min.js"></script>
-<script src="../docs/assets/js/application.js"></script>
-
-<script>
-    videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
-</script>
 </body>
 </html>

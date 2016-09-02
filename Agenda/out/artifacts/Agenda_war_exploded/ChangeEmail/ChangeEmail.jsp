@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="container">
-    <jsp:include page="ChangeEmailNav.jsp"/>
+    <jsp:include page="../Navigation.jsp"/>
     <h3 class="demo-panel-title">Change Email</h3>
     <form action="/ChangeEmailCheck" method="post">
         <div class="col-xs-3" style="width: 500px; position:relative; margin-left: 200px;">
@@ -43,14 +43,7 @@
         <input class="btn btn-danger" value="Reset" type="reset" style="position: relative; margin-top: 40px; margin-left: 300px; width: 300px">
     </form>
 </div>
-<jsp:include page="Footer.jsp"/>
-<script src="../dist/js/vendor/jquery.min.js"></script>
-<script src="../dist/js/vendor/video.js"></script>
-<script src="../dist/js/flat-ui.min.js"></script>
-<script src="../docs/assets/js/application.js"></script>
+<jsp:include page="../Footer.jsp"/>
 
-<script>
-    videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
-</script>
 </body>
 </html>

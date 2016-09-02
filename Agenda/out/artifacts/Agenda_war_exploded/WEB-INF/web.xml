@@ -35,6 +35,14 @@
         <servlet-name>AllMeetingServlet</servlet-name>
         <servlet-class>Servlet.AllMeetingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QueryMeetingbyTitleServlet</servlet-name>
+        <servlet-class>Servlet.QueryMeetingbyTitleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QueryMeetingbyIntervalServlet</servlet-name>
+        <servlet-class>Servlet.QueryMeetingbyIntervalServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInServlet</servlet-name>
         <url-pattern>/LogInCheck</url-pattern>
@@ -66,5 +74,13 @@
     <servlet-mapping>
         <servlet-name>AllMeetingServlet</servlet-name>
         <url-pattern>/AllMeeting</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QueryMeetingbyTitleServlet</servlet-name>
+        <url-pattern>/QueryMeetingbyTitle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QueryMeetingbyIntervalServlet</servlet-name>
+        <url-pattern>/QueryMeetingbyInterval</url-pattern>
     </servlet-mapping>
 </web-app>

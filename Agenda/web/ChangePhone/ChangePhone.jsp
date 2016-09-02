@@ -3,28 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Agenda - Free Meetings Adminstration System</title>
-    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
-
-    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
-
-    <!-- Loading Bootstrap -->
-    <link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
-    <link href="../dist/css/flat-ui.css" rel="stylesheet">
-    <link href="../docs/assets/css/demo.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="../img/favicon.ico">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-    <script src="../dist/js/vendor/html5shiv.js"></script>
-    <script src="../dist/js/vendor/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 <div class="container">
-    <jsp:include page="nav.jsp"/>
+    <jsp:include page="../Navigation.jsp"/>
     <h3 class="demo-panel-title">Change Phone</h3>
     <form action="/ChangePhoneCheck" method="post">
         <div class="col-xs-3" style="width: 500px; position:relative; margin-left: 200px;">
@@ -43,14 +25,6 @@
         <input class="btn btn-danger" value="Reset" type="reset" style="position: relative; margin-top: 40px; margin-left: 300px; width: 300px">
     </form>
 </div>
-<jsp:include page="Footer.jsp"/>
-<script src="../dist/js/vendor/jquery.min.js"></script>
-<script src="../dist/js/vendor/video.js"></script>
-<script src="../dist/js/flat-ui.min.js"></script>
-<script src="../docs/assets/js/application.js"></script>
-
-<script>
-    videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
-</script>
+<jsp:include page="../Footer.jsp"/>
 </body>
 </html>
