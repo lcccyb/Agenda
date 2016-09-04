@@ -23,6 +23,8 @@ public class LogInServlet extends HttpServlet {
             response.addCookie(cookie);
             response.sendRedirect("main.jsp");
         } else {
+            Cookie cookie = new Cookie("loginFail", "Wrong UserName");
+            response.addCookie(cookie);
             response.sendRedirect("LogIn.jsp");
         }
     }
