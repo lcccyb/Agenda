@@ -1,0 +1,9 @@
+*~
+*.gch
+*.o
+main
+Agenda
+data/
+test.cpp
+docs/
+tmp/
